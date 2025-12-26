@@ -1,0 +1,22 @@
+[package]
+name = "iHODL"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.42", features = ["full"] }
+
+# Use published Solana crates versions
+solana-client = "1.14.16"
+solana-sdk = "1.14.16"
+solana-transaction-status = "1.14.16"
+spl-token = "3.3.0"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+rand = "0.8"
+reqwest = { version = "0.11", features = ["json", "blocking", "rustls-tls"] }
+bs58 = "0.4"
+log = "0.4"
+env_logger = "0.10"
