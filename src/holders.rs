@@ -42,7 +42,7 @@ pub async fn fetch_holders() -> Vec<Holder> {
     ) {
         Ok(accounts) => accounts,
         Err(e) => {
-            eprintln!("⚠️ Failed to fetch token accounts: {:?}", e);
+            eprintln!("Failed to fetch token accounts: {:?}", e);
             return vec![];
         }
     };
