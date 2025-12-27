@@ -4,7 +4,7 @@
 
 This Rust-based script selects eligible $iHODL token holders, distributes rewards from collected fees, and notifies winners via Telegram every 24 hours. Previous winners can win again, and the distribution logic ensures fair randomness while rewarding long-term holders.
 
-*** Ca ***: - 
+Ca: - 
 
 ---
 
