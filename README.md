@@ -38,4 +38,19 @@ iHODL/
 ```
 ---
 
+```mermaid
+flowchart TD
+    A[Start Bot / Load .env & Config] --> B[Fetch Holders from Solana RPC]
+    B --> C{Filter by TOKEN_THRESHOLD}
+    C --> D[Shuffle Holders & Select Winners]
+    D --> E[Limit Previous Winners\n(MAX_PREV_WINNER_RATIO)]
+    E --> F[Fetch Total Fees\n(fetch_total_fees)]
+    F --> G[Split Fees & Send SOL\n- DEV Fee\n- Winners Fee\n- Handle Remainder]
+    G --> H[Update winners.json\n(Async / Mutex)]
+    H --> I[Notify Winners via Telegram Bot]
+    I --> J[Sleep for CYCLE_HOURS then Repeat Loop]
+
+```
+---
+
 
