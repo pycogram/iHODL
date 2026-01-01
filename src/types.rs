@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-/// Represents a token holder with their balance information
+/// Represents a token holder with their balance info
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TokenHolder {
     pub owner: String,
