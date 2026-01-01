@@ -9,7 +9,7 @@ use spl_token::state::Account as TokenAccount;
 use std::str::FromStr;
 use crate::types::TokenHolder;
 
-/// Fetch all token holders for a given mint address
+/// Fetch all token holders based on a given mint address
 pub async fn fetch_token_holders(
     rpc_client: &RpcClient,
     mint_address: &str,
