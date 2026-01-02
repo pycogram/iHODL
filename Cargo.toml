@@ -1,5 +1,5 @@
 [package]
-name = "token_scanner"
+name = "solana_token_holders"
 version = "0.1.0"
 edition = "2021"
 
@@ -12,3 +12,7 @@ tokio = { version = "1.35", features = ["full"] }
 anyhow = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+teloxide = { version = "0.12", features = ["macros"] }
+log = "0.4"
+pretty_env_logger = "0.5"
+dotenv = "0.15"

@@ -11,7 +11,7 @@ pub fn filter_by_minimum_ui_amount(
         .collect()
 }
 
-/// Sort holders by balance in descending order (highest to the lowest)
+/// Sort holders by balance in descending order (highest first)
 pub fn sort_by_balance_desc(mut holders: Vec<TokenHolder>) -> Vec<TokenHolder> {
     holders.sort_by(|a, b| b.balance.cmp(&a.balance));
     holders

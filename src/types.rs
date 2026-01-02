@@ -1,12 +1,11 @@
 use serde::{Deserialize, Serialize};
 
-/// Represents a token holder with their balance info
+/// Represents a token holder with their balance information
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TokenHolder {
     pub owner: String,
     pub balance: u64,
     pub decimals: u8,
-    pub holding_duration: Option<i64>, 
 }
 
 impl TokenHolder {
@@ -15,7 +14,6 @@ impl TokenHolder {
             owner,
             balance,
             decimals,
-            holding_duration: None,
         }
     }
     
