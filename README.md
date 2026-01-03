@@ -63,4 +63,4 @@ src/
 
 ### Example Bot Output
 
-![Telegram bot showing token holder analysis](assets/bot-output.png)
+![Telegram bot showing token holder analysis](assets/screenshot.png)
