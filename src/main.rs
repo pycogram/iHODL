@@ -3,7 +3,9 @@ mod client;
 mod fetcher;
 mod filter;
 mod types;
+mod wallet_age;  
 mod bot;
+mod whale;
 
 use anyhow::Result;
 
