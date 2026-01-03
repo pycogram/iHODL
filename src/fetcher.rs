@@ -88,7 +88,7 @@ fn get_token_accounts_by_mint(
     Ok(accounts)
 }
 
-/// Parse raw account data into a TokenAccount
+/// Parse raw account data into a Token Account
 fn parse_token_account(data: &[u8]) -> Result<TokenAccount> {
     TokenAccount::unpack_from_slice(data)
         .map_err(|e| anyhow!("Failed to unpack token account: {}", e))
