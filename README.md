@@ -1,41 +1,66 @@
-## $iHODL Reward System 
+# 🧠 Solana Token Holders Analyzer Bot (TokyScanner)
 
-🚀 Automated reward distribution system for Solana token holders.
+A Telegram bot that analyzes **Solana token holders** and highlights **bundle wallets**, **whales**, and **top holders** in real time.
 
-This Rust-based script selects eligible $iHODL token holders, distributes rewards from collected fees, and notifies winners via Telegram every 24 hours. Previous winners can win again, and the distribution logic ensures fair randomness while rewarding long-term holders.
-
-Ca: - 
+Built in **Rust** using **Teloxide** and the **Solana RPC**, this bot is designed for speed, clarity, and on-chain transparency.
 
 ---
 
-## Features 
+## 🚀 Features
 
-- Rewards holders with ≥100,000 $iHODL tokens
-- Selects holders who have held tokens for ≥24 hours
-- Excludes wallets that sold or transferred tokens
-- Randomly selects 10% of eligible holders per cycle
-- Distributes 10% fees to dev wallet, 90% to winners
-- Supports previous winners, with configurable max ratio
-- Sends notifications via Telegram bot
-- Stores winners in a JSON file (winners.json)
+- 🔍 Fetches all token holders for a given mint address
+- ✅ Filters holders by minimum token balance
+- 🆕 Detects **bundle wallets** (recently created wallets)
+- 🐋 Detects **whales** (wallets holding large SOL balances)
+- 📊 Calculates bundle & whale percentages
+- 🏆 Displays **Top 5 holders** ranked by balance
+- ⚡ Runs wallet checks **in parallel** for performance
+- 💬 Clean **plain-text Telegram output** (no markdown issues)
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+- Rust
+- Teloxide (Telegram bot framework)
+- Solana RPC
+- Tokio (async runtime)
+- Anyhow (error handling)
+
+---
+## 📦 Project Structure
 
 ```text
-iHODL/
-├── Cargo.toml
-├── src/
-│   ├── main.rs
-│   ├── client.rs          
-│   ├── config.rs
-│   ├── fetcher.rs
-│   ├── filter.rs
-│   ├── main.rs
-│   └── types.rs
-├── winners.json
+src/
+├── bot.rs # Telegram bot logic
+├── client.rs # Solana RPC client
+├── fetcher.rs # Token holder fetching
+├── filter.rs # Sorting & filtering
+├── wallet_age.rs # Wallet age detection
+├── whale.rs # Whale detection
+├── config.rs # App configuration
+└── main.rs # Entry point
 ```
+---
+
+## ▶️ Running the Bot
+
+- Build: cargo build --release
+- Run: cargo run --release 
+
+---
 
 
+## 🤖 Telegram Commands
 
+- `/help` — Show available commands
+- `/check <MINT_ADDRESS>` — Analyze token holders
+
+**Example**:
+/check So11111111111111111111111111111111111111112
+
+---
+
+### Example Bot Output
+
+![Telegram bot showing token holder analysis](assets/bot-output.png)
