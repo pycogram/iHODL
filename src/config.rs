@@ -1,6 +1,13 @@
 use std::env;
 
+/// Initialize environment variables from .env file
+pub fn init() {
+    dotenv::dotenv().ok();
+}
+
 pub const MINIMUM_UI_AMOUNT: f64 = 2_000_000.0;
+pub const MAX_WALLET_AGE_HOURS: u64 = 48;
+pub const MINIMUM_SOL_FOR_WHALE: f64 = 40.0;
 
 /// Get the Solana RPC URL from environment or use default
 pub fn get_rpc_url() -> String {
